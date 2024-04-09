@@ -9,17 +9,17 @@
         android:id="@+id/navigation_bmi"
         android:name="com.example.zad2.ui.home.HomeFragment"
         android:label="@string/title_bmi"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_bmi" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.zad2.ui.dashboard.DashboardFragment"
         android:label="@string/title_kcal"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_kcal" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.zad2.ui.notifications.NotificationsFragment"
         android:label="@string/title_recipes"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_recipes" />
 </navigation>
