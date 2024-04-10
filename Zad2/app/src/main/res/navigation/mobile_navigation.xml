@@ -12,14 +12,19 @@
         tools:layout="@layout/fragment_bmi" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_kcal"
         android:name="com.example.zad2.ui.kcal.KcalFragment"
         android:label="@string/title_kcal"
         tools:layout="@layout/fragment_kcal" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_recipients"
         android:name="com.example.zad2.ui.recipies.RecipiesFragment"
         android:label="@string/title_recipes"
         tools:layout="@layout/fragment_recipes" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.zad2.MainActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/fragment_main"/>
 </navigation>

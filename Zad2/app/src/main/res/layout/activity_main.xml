@@ -43,6 +43,6 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/baseline_boy_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
