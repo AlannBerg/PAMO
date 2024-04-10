@@ -10,4 +10,9 @@
     <string name="oblicz_bmi">Oblicz BMI</string>
     <string name="waga_kg">Waga kg</string>
     <string name="wzrost_cm">Wzrost cm</string>
+    <string name="calculate_kcal">Calculate kcal</string>
+    <string name="wiek">Wiek</string>
+    <string name="calculate">Calculate</string>
+    <string name="m">M</string>
+    <string name="w">W</string>
 </resources>
