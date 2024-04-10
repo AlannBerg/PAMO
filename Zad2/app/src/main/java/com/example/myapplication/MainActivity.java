@@ -1,76 +1,51 @@
 package com.example.myapplication;
 
-import static java.util.Objects.nonNull;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import org.jetbrains.annotations.NotNull;
+import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView userWeightInput;
-    private TextView userHeightInput;
-    private TextView userBMIOutput;
-
-    private Button calculateButton;
-
-    private Integer bmiValue;
+    ActivityMainBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        userWeightInput = (TextView) findViewById(R.id.weightEditText);
-        userHeightInput = (TextView) findViewById(R.id.heightEditText);
-        userBMIOutput = (TextView) findViewById(R.id.BMIValueText);
+        binding.bottomNavigationView.setOnItemReselectedListener(item -> {
+            if (item.getItemId() == R.id.main) {
 
-        calculateButton = (Button) findViewById(R.id.calculateBMIButton);
-        calculateButton.setOnClickListener(summitButtonListener);
+            }
+            if (item.getItemId() == R.id.bmi) {
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+            }
+            if (item.getItemId() == R.id.kcal) {
+
+            }
+            if (item.getItemId() == R.id.recipies) {
+
+            }
+
         });
     }
 
-    private final View.OnClickListener summitButtonListener =
-            new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Integer userHeight = getInteger(userHeightInput);
-                    Integer userWeight = getInteger(userWeightInput);
-                    if (nonNull(userWeight) && nonNull(userHeight)) {
-                        calculateBMI(userHeight, userWeight);
-                    }
-                }
-            };
-
-    private void calculateBMI(@NotNull Integer userHeightCm, @NotNull Integer userWeight) {
-        double userHeightMeters = userHeightCm / 100.0;
-        Double userHeightMetersSquare = Math.pow(userHeightMeters,2);
-
-        Double bmiValue = userWeight / userHeightMetersSquare;
-        String bmiValueString = String.format("%.1f", bmiValue);
-        userBMIOutput.setText(bmiValueString);
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main, fragment);
+        fragmentTransaction.commit();
     }
 
-    private Integer getInteger(@NotNull TextView textView) {
-        try {
-            return Integer.valueOf(textView.getText().toString());
-        } catch (Exception e) {
-            return null;
-        }
-    }
 }
+
+
