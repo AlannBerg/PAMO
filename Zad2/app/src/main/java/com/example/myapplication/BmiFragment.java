@@ -1,12 +1,19 @@
 package com.example.myapplication;
 
+import static java.util.Objects.nonNull;
+
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +67,44 @@ public class BmiFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.fragment_bmi, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        final TextView userWeightInput = (TextView) getView().findViewById(R.id.weightEditText);
+        final TextView userHeightInput = (TextView) getView().findViewById(R.id.heightEditText);
+        final TextView userBMIOutput = (TextView) getView().findViewById(R.id.BMIValueText);
+        final Button calculateButton = (Button) getView().findViewById(R.id.calculateBMIButton);
+
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer userHeight = getInteger(userHeightInput);
+                Integer userWeight = getInteger(userWeightInput);
+                if (nonNull(userWeight) && nonNull(userHeight)) {
+                    String bmiResult = calculateBMI(userHeight, userWeight);
+                    userBMIOutput.setText(bmiResult);
+                }
+            }
+        });
+
+    }
+
+    private String calculateBMI(@NotNull Integer userHeightCm, @NotNull Integer userWeight) {
+        double userHeightMeters = userHeightCm / 100.0;
+        Double userHeightMetersSquare = Math.pow(userHeightMeters, 2);
+
+        Double bmiValue = userWeight / userHeightMetersSquare;
+        return String.format("%.1f", bmiValue);
+    }
+
+    private Integer getInteger(@NotNull TextView textView) {
+        try {
+            return Integer.valueOf(textView.getText().toString());
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
