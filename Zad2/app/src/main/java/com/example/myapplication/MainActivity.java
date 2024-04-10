@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 
 import android.os.Bundle;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
 
-        binding.bottomNavigationView.setOnItemReselectedListener(item -> {
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.home) {
                 replaceFragment(new HomeFragment());
             }
@@ -35,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new RecipiesFragment());
             }
 
+            return true;
         });
     }
 
