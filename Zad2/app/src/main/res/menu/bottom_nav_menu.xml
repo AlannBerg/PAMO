@@ -4,17 +4,17 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/bmi"
         android:icon="@drawable/baseline_boy_24"
-        android:title="BMI" />
+        android:title="@string/bmi" />
     <item
         android:id="@+id/kcal"
         android:icon="@drawable/kcal"
-        android:title="Kcal" />
+        android:title="@string/kcal" />
     <item
-        android:id="@+id/recipies"
+        android:id="@+id/recipes"
         android:icon="@drawable/food_svgrepo_com"
-        android:title="Recipies" />
+        android:title="@string/recipies" />
 </menu>
