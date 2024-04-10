@@ -26,7 +26,7 @@
 
 
         <EditText
-            android:id="@+id/weightEditText"
+            android:id="@+id/weightKcal"
             android:layout_width="252dp"
             android:layout_height="69dp"
             android:ems="10"
@@ -40,7 +40,7 @@
             app:layout_constraintVertical_bias="0.158" />
 
         <EditText
-            android:id="@+id/heightEditText"
+            android:id="@+id/heightKcal"
             android:layout_width="255dp"
             android:layout_height="84dp"
             android:ems="10"
@@ -54,7 +54,7 @@
             app:layout_constraintVertical_bias="0.302" />
 
         <EditText
-            android:id="@+id/ageEditText"
+            android:id="@+id/ageKcal"
             android:layout_width="255dp"
             android:layout_height="84dp"
             android:ems="10"
@@ -68,7 +68,7 @@
             app:layout_constraintVertical_bias="0.457" />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/genderSwitch"
             android:layout_width="80dp"
             android:layout_height="29dp"
             android:layout_marginTop="52dp"
@@ -76,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ageEditText"
+            app:layout_constraintTop_toBottomOf="@+id/ageKcal"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -86,7 +86,7 @@
             android:text="@string/w"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/switch2"
+            app:layout_constraintEnd_toStartOf="@+id/genderSwitch"
             app:layout_constraintHorizontal_bias="0.829"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -101,7 +101,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
-            app:layout_constraintStart_toEndOf="@+id/switch2"
+            app:layout_constraintStart_toEndOf="@+id/genderSwitch"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.631" />
 
@@ -114,17 +114,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch2"
+            app:layout_constraintTop_toBottomOf="@+id/genderSwitch"
             app:layout_constraintVertical_bias="0.8" />
 
         <TextView
             android:id="@+id/resultKcalTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="25sp"
             app:layout_constraintBottom_toTopOf="@+id/calculateKcalButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch2" />
+            app:layout_constraintTop_toBottomOf="@+id/genderSwitch" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

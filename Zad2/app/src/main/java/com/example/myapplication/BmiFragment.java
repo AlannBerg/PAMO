@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.Utils.getInteger;
 import static java.util.Objects.nonNull;
 
 import android.os.Bundle;
@@ -98,13 +99,5 @@ public class BmiFragment extends Fragment {
 
         Double bmiValue = userWeight / userHeightMetersSquare;
         return String.format("%.1f", bmiValue);
-    }
-
-    private Integer getInteger(@NotNull TextView textView) {
-        try {
-            return Integer.valueOf(textView.getText().toString());
-        } catch (Exception e) {
-            return null;
-        }
     }
 }

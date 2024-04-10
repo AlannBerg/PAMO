@@ -1,12 +1,21 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.Utils.getInteger;
+
+import static java.util.Objects.isNull;
+
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Switch;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +69,46 @@ public class KcalFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_kcal, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        TextView weightTextView = (TextView) getView().findViewById(R.id.weightKcal);
+        TextView heightTextView = (TextView) getView().findViewById(R.id.heightKcal);
+        TextView ageTextView = (TextView) getView().findViewById(R.id.ageKcal);
+        TextView kcalResultTextView = (TextView) getView().findViewById(R.id.resultKcalTextView);
+        Switch genderSwitch = (Switch) getView().findViewById(R.id.genderSwitch);
+
+        Button calculateButton = getView().findViewById(R.id.calculateKcalButton);
+
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer age = getInteger(ageTextView);
+                Integer weight = getInteger(weightTextView);
+                Integer height = getInteger(heightTextView);
+                boolean canDrive = genderSwitch.isChecked();
+
+                if (isNull(age) || isNull(weight) || isNull(height)) {
+                    return;
+                }
+
+                String kcal = calculateKcal(age, weight, height, canDrive);
+                kcalResultTextView.setText(kcal);
+            }
+        });
+    }
+
+    private String calculateKcal(@NonNull Integer age, @NonNull Integer weight, @NonNull Integer height, boolean canDrive) {
+        double bmr;
+        if (canDrive) {
+            bmr = 66 + (13.7 * weight) + (5 * height) - (6.8 * age); // Male
+        } else {
+            bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age); // Female
+        }
+
+        return String.format("%.2f", bmr);
     }
 }
