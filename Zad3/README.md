@@ -4,20 +4,22 @@ Aplikacja na androida 9.0 oraz wyższych.
 
 Sposób działania.
 
-Screeny dzialania sa w folderze /screenshots
+Screeny dzialania sa w folderze (/screenshots)[Lab3/screenshots]
 
-Home
+Unit testy
+<img width="1255" alt="unit test" src="https://github.com/AlannBerg/PAMO/assets/76206945/72bd0bc3-cc32-43cd-914c-87d7b119389f">
 
-![home](https://github.com/AlannBerg/PAMO/assets/76206945/8b5dda5a-e660-47db-aa2c-c99b77596d24)
+Espresso
 
-BMI
+<img width="1670" alt="Espresso test" src="https://github.com/AlannBerg/PAMO/assets/76206945/9c0eeb90-19a5-454d-884d-9b5a476ec251">
 
-![bmi](https://github.com/AlannBerg/PAMO/assets/76206945/4ea2f61a-d6e9-4305-ba2e-1726793e312f)
+Monkey 
 
-KCAL
+<img width="1670" alt="Using monkey" src="https://github.com/AlannBerg/PAMO/assets/76206945/461db980-154c-4b56-b29a-cde2901bacbe">
 
-![kcal](https://github.com/AlannBerg/PAMO/assets/76206945/4d5dbb04-8c28-47e3-9770-ccfc48406463)
 
-RECIPES
+(Monkey logs)[Lab3/screenshots/monkey/] 
 
-![recipe](https://github.com/AlannBerg/PAMO/assets/76206945/7e042452-5805-4da4-bb94-ced343a48412)
+
+(Statyczna analiza)[Lab3/screenshots/static_inspect.html] 
+
