@@ -18,8 +18,8 @@ Monkey
 <img width="1670" alt="Using monkey" src="https://github.com/AlannBerg/PAMO/assets/76206945/461db980-154c-4b56-b29a-cde2901bacbe">
 
 
-(Monkey logs)[Lab3/screenshots/monkey/] 
+[Monkey logs](Lab3/screenshots/monkey/)
 
 
-(Statyczna analiza)[Lab3/screenshots/static_inspect.html] 
+[Statyczna analiza](Lab3/screenshots/static_inspect.html)
 
