@@ -3,7 +3,7 @@ Aplikacja na androida 9.0 oraz wyższych.
 
 Sposób działania.
 
-Screeny dzialania sa w folderze (/screenshots)[Zad3/screenshots]
+Screeny dzialania sa w folderze [/screenshots](screenshots/)
 
 Unit testy
 <img width="1255" alt="unit test" src="https://github.com/AlannBerg/PAMO/assets/76206945/72bd0bc3-cc32-43cd-914c-87d7b119389f">
@@ -17,8 +17,8 @@ Monkey
 <img width="1670" alt="Using monkey" src="https://github.com/AlannBerg/PAMO/assets/76206945/461db980-154c-4b56-b29a-cde2901bacbe">
 
 
-[Monkey logs](Zad3/screenshots/monkey/)
+[Monkey logs](screenshots/monkey/)
 
 
-[Statyczna analiza](Zad3/screenshots/static_inspect.html)
+[Statyczna analiza](screenshots/static_inspect.html)
 
