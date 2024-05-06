@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="bmi">BMI</string>
+    <string name="kcal">Kcal</string>
+    <string name="recipies">Recipies</string>
+    <string name="twoje_bmi">Twoje BMI</string>
+    <string name="oblicz_bmi">Oblicz BMI</string>
+    <string name="waga_kg">Waga kg</string>
+    <string name="wzrost_cm">Wzrost cm</string>
+    <string name="calculate_kcal">Calculate kcal</string>
+    <string name="wiek">Wiek</string>
+    <string name="calculate">Calculate</string>
+    <string name="m">M</string>
+    <string name="w">W</string>
+    <string name="przepisy">RECIPES</string>
+    <string name="recipes">Sznycelki drobiowe po francusku\n\nKrok 1\nPrzygotuj ciasto, mieszając ze sobą jajko, zupę cebulową, mąkę, mleko i żółty ser. Możesz dodać do panierki pokruszone orzechy lub ziarna słonecznika. Sznycle będą wtedy bardziej chrupiące.\n\nSznycelki drobiowe po francusku - Krok 1\nKrok 2\nPiersi pokrój pod skosem w cienkie plastry.\n\nSznycelki drobiowe po francusku - Krok 2\nKrok 3\nMięso zanurz w cieście i smaż na rozgrzanym tłuszczu przez 3-4 minuty z każdej strony. Kotleciki ułóż na papierowym ręczniku, aby odsączyć nadmiar tłuszczu.\n\n\n\nMakaron w sosie pieczarkowym\n\nKrok 1\nPosiekaj cebulę w kostkę. Pokrój kurczaka w paski, a grzyby w plasterki.\n\nMakaron w sosie pieczarkowym - Krok 1\nKrok 2\nUgotuj makaron wg wskazówek na opakowaniu. Wymieszaj Fix Knorr z mlekiem i musztardą.\n\nMakaron w sosie pieczarkowym - Krok 2\nKrok 3\nUsmaż grzyby na 1 łyżce oleju. Odłóż na talerz, a następnie usmaż osobno cebulę. Dodaj kurczaka i przesmaż na złoto. Przełóż grzyby na patelnię.\n\nMakaron w sosie pieczarkowym - Krok 3\nKrok 4\nCałość połącz z sosem. Gotuj przez 5 min. aż lekko zgęstnieje.\n\nMakaron w sosie pieczarkowym - Krok 4\nKrok 5\nPodawaj makaron posypany posiekaną natką pietruszki.</string>
+</resources>
