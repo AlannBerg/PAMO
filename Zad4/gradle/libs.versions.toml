@@ -18,13 +18,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 activity = { group = "androidx.activity", name = "activity", version = "1.9.0" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentTesting" }
-
-#rule = { group = "com.android.support.test", name = "rules", version = "1.0.2" }
-#runner = { group = "com.android.support.test", name = "runner", version = "1.0.2" }
-
 rule = { group = "com.android.test", name = "rules", version = "1.0.2" }
 runner = { group = "com.android.test", name = "runner", version = "1.0.2" }
-
+graph = { group = 'com.jjoe64', name = "graphview", version = '4.2.2' }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

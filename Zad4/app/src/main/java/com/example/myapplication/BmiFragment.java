@@ -3,15 +3,22 @@ package com.example.myapplication;
 import static com.example.myapplication.BmiCalculator.calculateBMI;
 import static com.example.myapplication.Utils.getInteger;
 import static java.util.Objects.nonNull;
+
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 
 /**
@@ -76,7 +83,8 @@ public class BmiFragment extends Fragment {
         final TextView userHeightInput = (TextView) getView().findViewById(R.id.heightEditText);
         final TextView userBMIOutput = (TextView) getView().findViewById(R.id.BMIValueText);
         final Button calculateButton = (Button) getView().findViewById(R.id.calculateBMIButton);
-
+        final GraphView graphView = (GraphView) getView().findViewById(R.id.Graph);
+        mockGraphValues(graphView);
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,6 +96,36 @@ public class BmiFragment extends Fragment {
                 }
             }
         });
+
+    }
+
+    private void mockGraphValues(@NonNull GraphView graphView) {
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
+                // on below line we are adding
+                // each point on our x and y axis.
+                new DataPoint(1, 22),
+                new DataPoint(1.5, 21.5),
+                new DataPoint(2, 22.2),
+                new DataPoint(2.5, 21.7),
+                new DataPoint(3, 22.7)
+        });
+
+        // after adding data to our line graph series.
+        // on below line we are setting
+        // title for our graph view.
+        graphView.setTitle("Your BMI in time");
+
+        // on below line we are setting
+        // text color to our graph view.
+//        graphView.setTitleColor(R.color.);
+
+        // on below line we are setting
+        // our title text size.
+        graphView.setTitleTextSize(12);
+
+        // on below line we are adding
+        // data series to our graph view.
+        graphView.addSeries(series);
 
     }
 }
