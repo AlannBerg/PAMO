@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/bmi"
+        android:icon="@drawable/baseline_boy_24"
+        android:title="@string/bmi" />
+    <item
+        android:id="@+id/kcal"
+        android:icon="@drawable/kcal"
+        android:title="@string/kcal" />
+    <item
+        android:id="@+id/recipes"
+        android:icon="@drawable/food_svgrepo_com"
+        android:title="@string/recipies" />
+    <item
+        android:id="@+id/shop_list"
+        android:icon="@drawable/shop_list"
+        android:title="@string/shop_list" />
+</menu>
