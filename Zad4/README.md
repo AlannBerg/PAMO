@@ -1,24 +1,14 @@
-LAB 3 Testy do aplikacji z labow 2
-Aplikacja na androida 9.0 oraz wyższych.
+LAB 4 Lista zakupow oraz wykres bmi. + 10 zadan kotlin
 
-Sposób działania.
+## Kotlin
+[kotlin zadania](/kotlin/lab4_kotlin)
 
-Screeny dzialania sa w folderze [/screenshots](screenshots/)
+## Wykres
+![image](https://github.com/AlannBerg/PAMO/assets/76206945/dba6a69e-2240-46d7-b3c2-69588e58b1fc)
 
-Unit testy
-<img width="1255" alt="unit test" src="https://github.com/AlannBerg/PAMO/assets/76206945/72bd0bc3-cc32-43cd-914c-87d7b119389f">
+[zobacz](/screenshots/Chart.png)
 
-Espresso
+## Lista zakupow
+![image](https://github.com/AlannBerg/PAMO/assets/76206945/b459e5c1-c737-47dd-aa28-39c0b7c460d5)
 
-<img width="1670" alt="Espresso test" src="https://github.com/AlannBerg/PAMO/assets/76206945/9c0eeb90-19a5-454d-884d-9b5a476ec251">
-
-Monkey 
-
-<img width="1670" alt="Using monkey" src="https://github.com/AlannBerg/PAMO/assets/76206945/461db980-154c-4b56-b29a-cde2901bacbe">
-
-
-[Monkey logs](screenshots/monkey/)
-
-
-[Statyczna analiza](screenshots/static_inspect.html)
-
+[zobacz](/screenshots/Shop_list.png)
