@@ -39,6 +39,8 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.fragment.testing)
+    implementation(libs.legacy.support.v4)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     testImplementation(libs.rule)
     testImplementation(libs.runner)

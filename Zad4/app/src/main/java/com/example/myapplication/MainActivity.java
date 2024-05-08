@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
             if (item.getItemId() == R.id.recipes) {
                 replaceFragment(new RecipiesFragment());
             }
+            if (item.getItemId() == R.id.shop_list) {
+                replaceFragment(new ShopListFragment());
+            }
 
             return true;
         });

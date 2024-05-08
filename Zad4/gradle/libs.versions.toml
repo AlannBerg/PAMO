@@ -8,6 +8,8 @@ material = "1.11.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
 fragmentTesting = "1.6.2"
+legacySupportV4 = "1.0.0"
+recyclerview = "1.3.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -21,6 +23,8 @@ fragment-testing = { group = "androidx.fragment", name = "fragment-testing", ver
 rule = { group = "com.android.test", name = "rules", version = "1.0.2" }
 runner = { group = "com.android.test", name = "runner", version = "1.0.2" }
 graph = { group = 'com.jjoe64', name = "graphview", version = '4.2.2' }
+legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
